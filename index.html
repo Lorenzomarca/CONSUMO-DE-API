@@ -3,14 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotação USD/BRL</title>]
- <link rel="stylesheet" href="style.css">
+    <title>Multi Cotações</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H1>Dolar hoje</H1>
-    <H2>R$ 5,22 </H2>
-    <H3>Data: 18/06/2026</H3>
-    <button>Atualizar cotação</button>
+    <div class="container">
+    
+        <div class="tabs">
+            <button class="tab-btn active" onclick="mudarMoeda('USD-BRL', this)">
+                <i class="ph ph-currency-dollar"></i> Dólar
+            </button>
+            <button class="tab-btn" onclick="mudarMoeda('EUR-BRL', this)">
+                <i class="ph ph-currency-eur"></i> Euro
+            </button>
+            <button class="tab-btn" onclick="mudarMoeda('BTC-BRL', this)">
+                <i class="ph ph-currency-btc"></i> Bitcoin
+            </button>
+        </div>
+
+    
+        <div class="card">
+            <div class="card-header">
+                <div class="icon-badge" id="moeda-icone">
+                    <i class="ph-fill ph-currency-dollar"></i>
+                </div>
+                <h1 id="moeda-nome">Dólar Americano</h1>
+            </div>
+
+            <div class="price-container">
+                <span class="currency-symbol">R$</span>
+                <span id="valor" class="price">---</span>
+            </div>
+
+            <p class="date-text">
+                <i class="ph ph-clock"></i> <span id="data">Carregando...</span>
+            </p>
+
+            <button onclick="consumir_api()" id="btn-atualizar">
+                <i class="ph ph-arrows-counter-clockwise"></i> Atualizar cotação
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top right, #f8fafc, #e2e8f0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Menu de Abas (Modificado para 3 colunas) */
+.tabs {
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 12px 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #64748b;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.tab-btn i {
+    font-size: 1.3rem;
+}
+
+.tab-btn:hover {
+    color: #0f172a;
+    background: #f1f5f9;
+}
+
+.tab-btn.active {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* Card Principal */
+.card {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    border: 1px solid #f1f5f9;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.icon-badge {
+    background: #f1f5f9;
+    color: #0f172a;
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.currency-symbol {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.price {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #0f172a;
+}
+
+.date-text {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+#btn-atualizar {
+    width: 100%;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+#btn-atualizar i {
+    font-size: 1.2rem;
+}
+
+#btn-atualizar:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+#btn-atualizar:active {
+    transform: translateY(0);
+}
+
+#btn-atualizar:disabled {
+    background-color: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
